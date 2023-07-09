@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">AEON MERX APP </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item  *ngFor="let c of componentes"
+    [routerLink]='c.reDirectTo' detail>
+    <ion-icon [name]="c.icon" slot="start"></ion-icon>
+    <ion-label>
+      {{ c.name }}
+    </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button routerLink="/alert" expand="full">INGENIERÍA MECÁNICA</ion-button>
+  
+  <ion-button routerLink="/accion-sheet" expand="full">PROGRAMACION</ion-button>
+  
+  <hr style="background-image: linear-gradient(to left,yellow,black,orange); height: 3%;" >
+  <img src="assets/15.jpg" alt="" srcset="">
+</ion-content>
